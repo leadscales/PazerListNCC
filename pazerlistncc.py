@@ -8,9 +8,8 @@ ids = str(requests.get("https://raw.githubusercontent.com/d3fc0n6/PazerList/mast
 
 s = re.findall(r'\d+',ids)
 
-for i in range(len(s)):
-    with open("Pazer.txt","w") as f:
-        for i in range(len(s)):
+with open("Pazer.txt","w") as f:
+    for i in range(len(s)):
             f.write(str(steam64(s[i]))+" - ?\n")
 
 print("Done, file saved to \"Pazer.txt\". Nullcore will automatically replace the question marks with actual player names once you encounter them in-game.")
